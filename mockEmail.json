@@ -1,0 +1,15 @@
+[
+    {
+      "id": "456def",
+      "payload": {
+        "headers": [
+          { "name": "From", "value": "teamlead@company.com" },
+          { "name": "Subject", "value": "Important: Project Update and Next Steps" }
+        ],
+        "body": {
+          "data": "SGkgZXZlcnlvbmUsCgpJIHdhbnRlZCB0byBnZXQgaW4gdG91Y2ggcmVnYXJkaW5nIHRoZSByZWNlbnQgcHJvZ3Jlc3MgaW4gdGhlIFByb2plY3QgQWxwaGEgcmVwb3J0LgoKQXMgbXVjaCBhcyB3ZSBhdHRlbXB0ZWQgdG8gc3RpY2sgdG8gb3VyIGRlbGl2ZXJhYmxlcywgdGhlIHJlcG9ydCB3YXMgZGVsYXllZCBkdWUgdG8gdW5mb3Jlc2VlbiBpc3N1ZXMgd2l0aCB0aGUgZGF0YSBpbnRlZ3JhdGlvbiBtb2R1bGUsIHdoaWNoIHdlIGhvcGUgdG8gcmVzb2x2ZSBieSBuZXh0IHdlZWsuCgpJbiBsaWdodCBvZiB0aGUgZGVsYXksIHdlIHdpbGwgYmUgaG9sZGluZyBhIHZpcnR1YWwgY2FsbCBvbiBUaHVyc2RheSBhdCAxMTozMCBhbSB0byBkaXNjdXNzIHRoZSBuZXh0IHN0ZXBzIGFuZCByZWFsaWduIHRoZSBkZWxpdmVyYWJsZXMuIFBsZWFzZSBtYWtlIHN1cmUgdGhhdCB5b3UgYXJlIGF2YWlsYWJsZSBhbmQgbGV0IHVzIGtub3cgaWYgdGhlcmUgYXJlIGFueSBjb25mbGljdHMgb24geW91ciBlbmQuCgpCZXN0LApBbnlhIChUZWFtIExlYWQp"
+        }
+      }
+    }
+  ]
+  

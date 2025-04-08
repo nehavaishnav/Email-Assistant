@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Email Assistant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      background: #f4f6f8;
+    }
+    h1 { color: #333; }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin-bottom: 1.5rem;
+    }
+    .label { font-weight: bold; color: #555; }
+    pre { background: #eee; padding: 1rem; border-radius: 8px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>🧠 AI-Powered Email Assistant</h1>
+  <div class="card" id="email-card">
+    <p><span class="label">From:</span> <span id="from"></span></p>
+    <p><span class="label">Subject:</span> <span id="subject"></span></p>
+    <p><span class="label">Email Body:</span></p>
+    <pre id="body"></pre>
+  </div>
+
+  <div class="card">
+    <p><span class="label">Summary:</span></p>
+    <pre id="summary"></pre>
+  </div>
+
+  <div class="card">
+    <p><span class="label">Suggested Reply:</span></p>
+    <pre id="reply"></pre>
+  </div>
+
+  <script>
+    fetch("/api/email")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("from").textContent = data.from;
+        document.getElementById("subject").textContent = data.subject;
+        document.getElementById("body").textContent = data.original_email;
+        document.getElementById("summary").textContent = data.summary;
+        document.getElementById("reply").textContent = data.ai_reply;
+      });
+  </script>
+</body>
+</html>
