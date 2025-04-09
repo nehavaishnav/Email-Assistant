@@ -12,6 +12,11 @@ An AI-powered email assistant designed to streamline your email management by pr
 
 - **Web-Based Interface**: Offers a user-friendly web interface built with Flask templates for seamless interaction with the assistant.
 
+## 📸 Screenshots
+## 📸 Screenshots
+![App UI](https://github.com/nehavaishnav/Email-Assistant/assets/1.png)  
+![App UI](https://github.com/nehavaishnav/Email-Assistant/assets/2.png)  
+
 ## Project Structure
 
 ```
