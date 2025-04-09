@@ -15,7 +15,7 @@ An AI-powered email assistant designed to streamline your email management by pr
 
 ## 📸 Screenshots
 ![App UI](https://github.com/nehavaishnav/Email-Assistant/blob/main/assets/1.png)  
-![App UI](https://github.com/nehavaishnav/Email-Assistant/assets/2.png)  
+![App UI](https://github.com/nehavaishnav/Email-Assistant/blob/main/assets/2.png)  
 
 ## Project Structure
 
