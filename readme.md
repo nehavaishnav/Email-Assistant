@@ -17,7 +17,7 @@ An AI-powered email assistant designed to streamline your email management by pr
 ```
 Email-Assistant/
 ├── templates/
-│   └── template.html       # Main HTML template for the web interface
+│   └── index.html       # Main HTML template for the web interface
 ├── app.py                  # Main Flask application script
 ├── mockEmail.json          # Sample email data for testing
 ├── requirements.txt        # List of Python dependencies
