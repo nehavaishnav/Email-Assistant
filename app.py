@@ -24,6 +24,7 @@ decoded_body = base64.b64decode(body_b64).decode('utf-8')
 @app.route("/")
 def index():
     return render_template("index.html")
+    return render_template("style.css")
 
 @app.route("/api/email")
 def generate_ai_response():

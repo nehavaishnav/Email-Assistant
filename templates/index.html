@@ -4,105 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Email Assistant</title>
-  <style>
-    :root {
-      --bg-light: #f4f6f8;
-      --bg-dark: #1e1e1e;
-      --card-light: #fff;
-      --card-dark: #2c2c2c;
-      --text-light: #333;
-      --text-dark: #f5f5f5;
-      --accent: #007BFF;
-    }
+<!-- Correct CSS and JS linking -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: var(--bg-light);
-      color: var(--text-light);
-      transition: background 0.3s, color 0.3s;
-    }
 
-    h1 {
-      color: var(--accent);
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .card {
-      background: var(--card-light);
-      padding: 1.5rem;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      margin-bottom: 2rem;
-      transition: background 0.3s;
-    }
-
-    .label {
-      font-weight: bold;
-      color: var(--accent);
-    }
-
-    pre {
-      background: #e9ecef;
-      padding: 1rem;
-      border-radius: 10px;
-      white-space: pre-wrap;
-    }
-
-    #loading {
-      display: none;
-      font-style: italic;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    #refresh-btn, #toggle-theme {
-      background-color: var(--accent);
-      color: white;
-      border: none;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-right: 1rem;
-      transition: background 0.3s ease;
-    }
-
-    #refresh-btn:hover, #toggle-theme:hover {
-      background-color: #0056b3;
-    }
-
-    .top-actions {
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    /* Dark mode support */
-    body.dark {
-      background: var(--bg-dark);
-      color: var(--text-dark);
-    }
-
-    body.dark .card {
-      background: var(--card-dark);
-    }
-
-    body.dark pre {
-      background: #444;
-      color: #eee;
-    }
-
-    body.dark #refresh-btn,
-    body.dark #toggle-theme {
-      background-color: #0a84ff;
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -132,38 +37,8 @@
       <pre id="reply"></pre>
     </div>
   </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
 
-  <script>
-    const loading = document.getElementById("loading");
-    const refreshBtn = document.getElementById("refresh-btn");
-    const toggleThemeBtn = document.getElementById("toggle-theme");
 
-    async function fetchEmail() {
-      loading.style.display = "block";
-      try {
-        const res = await fetch("/api/email");
-        if (!res.ok) throw new Error("Failed to load");
-        const data = await res.json();
-        document.getElementById("from").textContent = data.from || "N/A";
-        document.getElementById("subject").textContent = data.subject || "N/A";
-        document.getElementById("body").textContent = data.original_email || "N/A";
-        document.getElementById("summary").textContent = data.summary || "N/A";
-        document.getElementById("reply").textContent = data.ai_reply || "N/A";
-      } catch (err) {
-        alert("Error loading email: " + err.message);
-      } finally {
-        loading.style.display = "none";
-      }
-    }
-
-    refreshBtn.addEventListener("click", fetchEmail);
-
-    toggleThemeBtn.addEventListener("click", () => {
-      document.body.classList.toggle("dark");
-    });
-
-    // Load email on start
-    fetchEmail();
-  </script>
 </body>
 </html>
